@@ -25,5 +25,6 @@ CRON=1
 CRON=0
 <% end %>
 
-<% @environment.each do |env| %>
-<% end %>
+<%- @environment.each do |env| %>
+<%= env %>
+<% end -%>
