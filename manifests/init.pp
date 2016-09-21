@@ -8,6 +8,7 @@ class spamassassin (
   $blacklist_from   = [],
   $createprefs      = false,
   $cron_ensure      = present,
+  $environment      = [],
   $helperhomedir    = '',
   $listenip         = '127.0.0.1',
   $local            = false,
@@ -25,7 +26,6 @@ class spamassassin (
   $syslog           = 'mail',
   $trusted_networks = '', # e.g. '192.168.'
   $whitelist_from   = [],
-
 ) {
   case $::osfamily {
     RedHat: {
